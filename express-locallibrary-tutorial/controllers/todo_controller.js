@@ -23,7 +23,8 @@ const todoController = {
     })
     .catch(err => {
       console.error('Error getting todo:', err);
-      res.status(500).send('Error getting todo');
+      // res.status(500).send('Error getting todo');
+      res.render('error', { message: err });
     });
   },
 }
